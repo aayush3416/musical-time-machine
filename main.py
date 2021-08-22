@@ -16,12 +16,14 @@ sp = spotipy.Spotify(
         scope="playlist-modify-private",
         redirect_uri="http://example.com",
         client_id="YOUR CLIENT ID",
-        client_secret="YOUR OWN CLIENT SECRET",
+        client_secret="YOUR CLIENT SECRET",
         show_dialog=True,
         cache_path="token.txt"
     )
 )
-# In order to find your client_id and client_secret, go to "https://developer.spotify.com/" and create a new app. From there you will see your credentials.
+# In order to find your client_id and client_secret, go to "https://developer.spotify.com/dashboard/login" and create a new app. From there you will see your credentials.
+# After you create your app, go to edit setting, and where it says redirect URIS, type "http://example.com""
+
 user_id = sp.current_user()["id"]
 print(user_id)
 
